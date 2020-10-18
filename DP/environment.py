@@ -155,13 +155,6 @@ class Environment:
         if len(transition_probs) == 0:
             return None, None, True
 
-        # next_states = []
-        # probs = []
-        # for s, p in transition_probs.items():
-        #     next_states.append(s)
-        #     probs.append(p)
-
-        # next_state = np.random.choice(next_states, p=probs)
         next_state = np.random.choice(
             list(transition_probs.keys()), p=list(transition_probs.values())
         )
